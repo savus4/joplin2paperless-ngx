@@ -11,8 +11,20 @@
             "program": "${workspaceFolder}/joplin_to_paperless.py",
             "console": "integratedTerminal",
             "args": [
-                "joplin-export-md",
-                "exported-files"
+                "assets/joplin-export-md",
+                "assets/exported-files"
+            ],
+            "python": "${workspaceFolder}/.venv/bin/python"
+        },
+        {
+            "name": "joplin-uploader debug",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/upload_to_paperless.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--pdf-folder",
+                "assets/exported-files"
             ],
             "python": "${workspaceFolder}/.venv/bin/python"
         }
